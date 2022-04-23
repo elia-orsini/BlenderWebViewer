@@ -1,6 +1,8 @@
 # BlenderWebViewer
 a Web Viewer for Blender.
 
+![gif](https://user-images.githubusercontent.com/32492427/164890848-e6bf831d-06f8-4cba-80df-8cd4e3b32492.gif)
+
 **To get started**:
 - Clone the repo
 - Install the add-on for Blender (`blenderPlugin.zip`)
