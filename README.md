@@ -16,3 +16,11 @@ a Web Viewer for Blender.
 When you move objects around the plugin is going to hot-reload the page but if you add new elements you might have to refresh the page manually.
 
 It currently does not support Area lights.
+
+#
+
+to do list:
+
+- find a way to export/import ambient lights / HDRIs
+- add animations to the web viewer
+- convert area lights from blender to three.js
