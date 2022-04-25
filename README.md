@@ -7,8 +7,8 @@ a Web Viewer for Blender.
 - Clone the repo
 - Install the add-on for Blender (`blenderPlugin.zip`)
 - `cd` into the `viewer` folder and run `npm install`
-- in the same folder, run `npm run start` to start the server
-- change the path in the blender add-on to your `viewer` folder
+- in the same folder, run `npm run start` to start the server (you will need to keep this open and running while using the plugin)
+- change the path field in the blender add-on to your `viewer` folder (ie. Users/elia/Documents/BlenderWebViewer/viewer)
 - click `export` in the blender add-on
 - visit the page `localhost:3000` to view your blender scene in your browser
 #
@@ -17,4 +17,10 @@ When you move objects around the plugin is going to hot-reload the page but if y
 
 It currently does not support Area lights.
 
+#
 
+to do list:
+
+- find a way to export/import ambient lights / HDRIs
+- add animations to the web viewer
+- convert area lights from blender to three.js
