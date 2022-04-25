@@ -1,6 +1,6 @@
 import './App.css';
-import { useEffect, useLayoutEffect, useState } from 'react'
-import { applyProps, Canvas, useStore, useThree } from '@react-three/fiber'
+import { useEffect } from 'react'
+import { useThree } from '@react-three/fiber'
 import Scene from "./Scene";
 import { OrbitControls } from '@react-three/drei';
 import { useControls } from 'leva'
