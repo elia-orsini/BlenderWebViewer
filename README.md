@@ -24,3 +24,4 @@ to do list:
 - find a way to export/import ambient lights / HDRIs
 - add animations to the web viewer
 - convert area lights from blender to three.js
+- port over the blender camera position/rotation/fov to three.js
