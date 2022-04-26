@@ -36,7 +36,8 @@ def export_gltf(apply_modifiers, path):
     os.chdir('./src')
     glb_path = os.path.join('../', glb_path)
 
-    subprocess.run('npx gltfjsx ' + glb_path + ' --shadows --keepnames --instance', shell=True)
+#    subprocess.run('npx gltfjsx ' + glb_path + ' --shadows --keepnames --instance', shell=True)
+    subprocess.run('node ../../gltfjsx/cli.js ' + glb_path + ' --shadows --keepnames --instance', shell=True)
 
 
 bl_info = {
@@ -123,6 +124,10 @@ class WM_OT_RunServer(Operator):
         path = context.scene.my_tool.path
 
         if not th.is_alive():
+            os.chdir(path)
+            os.chdir('../')
+            os.chdir('gltfjsx')
+            subprocess.run('npm i', shell=True)
             os.chdir(path)
             subprocess.run('npm i', shell=True)
             th.start()
