@@ -4,4 +4,4 @@ install:
 	cd ..; \
 	cd viewer; \
 	npm install; \
-	npm run start;
+	HOST=0.0.0.0 npm run start;
