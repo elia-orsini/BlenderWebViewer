@@ -118,7 +118,7 @@ function parse(fileName, gltf, options = {}) {
     let isCamera = type === 'PerspectiveCamera' || type === 'OrthographicCamera'
     // Handle cameras
     if (isCamera) {
-      result += `makeDefault={true} `
+      result += `makeDefault={props.blenderCamera} `
       if (obj.zoom !== 1) result += `zoom={${rNbr(obj.zoom)}} `
       if (obj.far !== 2000) result += `far={${rNbr(obj.far)}} `
       if (obj.near !== 0.1) result += `near={${rNbr(obj.near)}} `
