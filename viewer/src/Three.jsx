@@ -39,7 +39,7 @@ function Three() {
     }, [bg, grid, axes])
 
     // adjust light intensity
-    const {scene} = useThree()
+    const {scene, camera} = useThree()
     useEffect(()=>{
         scene.children.map(child => {
             if (child.type == "Group") {
