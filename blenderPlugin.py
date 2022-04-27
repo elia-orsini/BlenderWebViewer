@@ -17,11 +17,10 @@ def export_gltf(apply_modifiers, path):
     bpy.ops.object.select_all(action='SELECT')
     scene = bpy.context.scene
 
-    folder_path = os.path.join(bpy.path.abspath(path), 'public')
+    folder_path = os.path.join(bpy.path.abspath(path), 'viewer/public')
     if not os.path.exists(path):
         os.makedirs(path)
     path = os.path.join(folder_path, 'scene.glb')
-    print(path)
 
     bpy.ops.export_scene.gltf(filepath=path, export_format='GLB', use_selection=True, export_apply=apply_modifiers, export_lights=True, export_cameras=True)
 
