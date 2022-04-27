@@ -6,9 +6,10 @@ a Web Viewer for Blender.
 **To get started**:
 - Clone the repo
 - Install the add-on for Blender (`blenderPlugin.zip`)
-- change the path field in the blender add-on to the cloned folder (ie. Users/elia/Documents/BlenderWebViewer)
-- run the following command in the BlenderWebViewer folder to install all the dependencies: 
-`npm --prefix ./viewer install ./viewer && npm --prefix ./gltfjsx install ./gltfjsx`. wait a few seconds while it downloads the dependencies
+- change the path field in the blender add-on to the cloned folder (ie. *Users/elia/Documents/BlenderWebViewer*)
+- run the following command from the BlenderWebViewer folder to install all the dependencies: <br />
+`npm --prefix ./viewer install ./viewer && npm --prefix ./gltfjsx install ./gltfjsx` <br />
+(wait a few seconds while it downloads the dependencies)
 - move into the viewer folder with `cd viewer` and run `npm start` to start the server
 - click `export` in the blender add-on
 - visit the page `localhost:3000` to view your blender scene in your browser
