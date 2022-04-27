@@ -113,27 +113,6 @@ class WM_OT_ExportScene(Operator):
 
         return {'FINISHED'}
     
-class WM_OT_RunServer(Operator):
-
-    bl_label = "RUN SERVER"
-    bl_idname = "wm.run_server"
-
-    def execute(self, context):
-
-        global th
-        path = context.scene.my_tool.path
-
-        if not th.is_alive():
-            os.chdir(path)
-            os.chdir('../')
-            os.chdir('gltfjsx')
-            subprocess.run('npm i', shell=True)
-            os.chdir(path)
-            subprocess.run('npm i', shell=True)
-            th.start()
-
-        return {'FINISHED'}
-    
 
 # ------------------------------------------------------------------------
 #    Menus
@@ -177,9 +156,7 @@ class OBJECT_PT_CustomPanel(HelloWorldPanel, Panel):
         layout.prop(mytool, "path")
         layout.separator()
         layout.prop(mytool, "apply_modifiers")
-        layout.separator()        
-        layout.label(text='SERVER RUNNING: ' + str(th.is_alive()))
-        layout.operator("wm.run_server")
+        layout.separator()
         layout.operator("wm.hello_world")
 # ------------------------------------------------------------------------
 #    Registration
@@ -190,7 +167,6 @@ classes = (
     WM_OT_ExportScene,
     OBJECT_MT_CustomMenu,
     OBJECT_PT_CustomPanel,
-    WM_OT_RunServer
 )
 def register():
     from bpy.utils import register_class
