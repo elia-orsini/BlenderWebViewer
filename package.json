@@ -1,0 +1,10 @@
+{
+  "name": "Blender Web Viewer",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {},
+  "scripts": {
+    "start": "npm --prefix ./viewer start ./viewer",
+    "dependencies": "npm --prefix ./viewer install ./viewer && npm --prefix ./gltfjsx install ./gltfjsx"
+  }
+}
