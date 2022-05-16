@@ -1,7 +1,7 @@
 import './App.css';
 import Three from './Three';
 import { Suspense } from 'react'
-import { applyProps, Canvas, useThree } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 
 function App() {
   return (

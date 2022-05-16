@@ -1,10 +1,10 @@
 import './App.css';
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useThree } from '@react-three/fiber'
 import Scene from "./Scene";
 import { OrbitControls, GizmoHelper, GizmoViewport, Environment} from '@react-three/drei';
 import { useControls, button } from 'leva'
-import * as THREE from 'three'
+import { AxesHelper } from 'three'
 
 function Three() {
 
@@ -81,7 +81,7 @@ function Three() {
             
             <Scene blenderCamera={blenderCamera}/>
 
-            {axes.axesHelper ? (<primitive object={new THREE.AxesHelper(60)} />) : (<></>)}
+            {axes.axesHelper ? (<primitive object={new AxesHelper(60)} />) : (<></>)}
             <mesh rotation={[Math.PI/2,Math.PI,Math.PI]} position={[0,0,0]}>
                 <planeBufferGeometry args={[120,120,100,100]}/>
                 <meshBasicMaterial color="#f3f3f3" wireframe opacity={grid.floor ? (0.07) : (0)} transparent/>

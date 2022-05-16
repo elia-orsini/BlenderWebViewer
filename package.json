@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {},
   "scripts": {
-    "start": "npm --prefix ./viewer start ./viewer",
+    "start": "npm --prefix ./viewer start ./viewer --host 0.0.0.0",
+    "startVR": "npm --prefix ./viewer/VRviewer start ./viewer/VRviewer --host 0.0.0.0",
+    "startAR": "npm --prefix ./viewer/ARviewer start ./viewer/ARviewer --host 0.0.0.0",
     "dependencies": "npm --prefix ./viewer install ./viewer && npm --prefix ./gltfjsx install ./gltfjsx"
   }
 }
