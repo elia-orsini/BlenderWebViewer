@@ -1,7 +1,7 @@
 # BlenderWebViewer
 a Web Viewer for Blender.
 
-![gif](https://user-images.githubusercontent.com/32492427/164890848-e6bf831d-06f8-4cba-80df-8cd4e3b32492.gif)
+![gif](https://media.giphy.com/media/hJGhtiQyOLK4ZJCfCb/giphy.gif)
 
 **To get started**:
 - Clone the repo
