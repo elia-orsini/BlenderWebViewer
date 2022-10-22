@@ -13,10 +13,10 @@ export default function Model({ ...props }) {
       <group name="Light" position={[4.08, 5.9, -1.01]} rotation={[1.89, 0.88, -2.05]}>
         <pointLight name="Light_Orientation" intensity={1000} decay={2} rotation={[-Math.PI / 2, 0, 0]} />
       </group>
-      <group name="Camera" position={[6.99, 5.27, -16.31]} rotation={[1.86, 0.14, -2.71]}>
+      <group name="Camera" position={[7.36, 4.96, 6.93]} rotation={[1.24, 0.33, -0.76]}>
         <PerspectiveCamera name="Camera_Orientation" makeDefault={props.blenderCamera} far={100} near={0.1} fov={22.9} rotation={[-Math.PI / 2, 0, 0]} />
       </group>
-      <mesh name="Cube" castShadow receiveShadow geometry={nodes.Cube.geometry} material={materials.Material} position={[-0.69, -0.11, -0.61]} scale={1.11} />
+      <mesh name="Cube" castShadow receiveShadow geometry={nodes.Cube.geometry} material={materials.Material} />
     </group>
   )
 }
