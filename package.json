@@ -1,12 +1,12 @@
 {
-  "name": "BlenderWebViewer",
+  "name": "blenderwebviewer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {},
   "scripts": {
-    "start": "npm --prefix ./viewer start ./viewer --host 0.0.0.0",
-    "startVR": "npm --prefix ./viewer/VRviewer start ./viewer/VRviewer --host 0.0.0.0",
-    "startAR": "npm --prefix ./viewer/ARviewer start ./viewer/ARviewer --host 0.0.0.0",
-    "dependencies": "npm --prefix ./viewer install ./viewer && npm --prefix ./gltfjsx install ./gltfjsx"
+    "start": "yarn --cwd ./viewer start ./viewer --host 0.0.0.0",
+    "startVR": "yarn --cwd ./viewer/VRviewer start --host 0.0.0.0",
+    "startAR": "yarn --cwd ./viewer/ARviewer start --host 0.0.0.0",
+    "dependencies": "yarn --cwd ./viewer install && yarn --cwd ./viewer/ARviewer install && yarn --cwd ./gltfjsx install"
   }
 }

@@ -1,0 +1,35 @@
+{
+  "name": "troika-three-text",
+  "version": "0.46.4",
+  "description": "SDF-based text rendering for Three.js",
+  "author": "Jason Johnston <jason.johnston@protectwise.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/protectwise/troika.git",
+    "directory": "packages/troika-three-text"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "dist/troika-three-text.umd.js",
+  "module": "dist/troika-three-text.esm.js",
+  "module:src": "src/index.js",
+  "dependencies": {
+    "bidi-js": "^1.0.2",
+    "troika-three-utils": "^0.46.0",
+    "troika-worker-utils": "^0.46.0",
+    "webgl-sdf-generator": "1.1.1"
+  },
+  "peerDependencies": {
+    "three": ">=0.103.0"
+  },
+  "devDependencies": {
+    "@fredli74/typr": "0.3.5",
+    "fflate": "^0.7.0",
+    "node-fetch": "^2.6.0"
+  },
+  "scripts": {
+    "build-typr": "rollup -c rollup.config.build-typr.js",
+    "build-woff2otf": "rollup -c rollup.config.build-woff2otf.js"
+  },
+  "gitHead": "b19170a9d8e1223138a2be7633eb8bf22eb6ff8f"
+}

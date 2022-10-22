@@ -48,8 +48,9 @@ function Three() {
     const ble = useControls({
         blenderView: button(() => {setBlenderCamera(true)})
     })
+
     const bg = useControls({
-        bg: {options: ['dawn', 'night', 'sunset', 'warehouse', 'forest', 'apartment', 'studio', 'city', 'park', 'lobby']}
+        bg: {options: ['color', 'dawn', 'night', 'sunset', 'warehouse', 'forest', 'apartment', 'studio', 'city', 'park', 'lobby']}
     })
 
     // cache values
@@ -78,8 +79,7 @@ function Three() {
         <>
             <ambientLight intensity={0.1} />
             <directionalLight position={[4,5,0]} intensity={[2]}/>
-            <Environment preset={bg.bg} />
-            {/* {bg.bg != 'color' ? (<Environment preset={bg.bg} background/>) : (<color attach="background" args={[bgColor.bgColor]} />)} */}
+            {bg.bg !== 'color' ? (<Environment preset={bg.bg} background/>) : (<color attach="background" args={[bgColor.bgColor]} />)}
             
             <Scene blenderCamera={blenderCamera} position={[0,0,-0.3]}/>
 
