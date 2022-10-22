@@ -1,10 +1,10 @@
 {
-  "name": "BlenderWebViewer",
+  "name": "blenderwebviewer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {},
   "scripts": {
-    "start": "npm --prefix ./viewer start ./viewer",
-    "dependencies": "npm --prefix ./viewer install ./viewer && npm --prefix ./gltfjsx install ./gltfjsx"
+    "start": "yarn --cwd ./viewer start ./viewer",
+    "dependencies": "yarn --cwd ./viewer install && yarn --cwd ./gltfjsx install"
   }
 }
