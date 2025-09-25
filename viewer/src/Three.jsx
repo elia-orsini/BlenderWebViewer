@@ -9,7 +9,54 @@ import * as THREE from "three";
 function Three() {
   const { scene, camera } = useThree();
 
-  camera.position.y = 4;
+  // Load camera position from localStorage
+  useEffect(() => {
+    const savedPosition = localStorage.getItem("cameraPosition");
+    const savedTarget = localStorage.getItem("cameraTarget");
+
+    if (savedPosition) {
+      const position = JSON.parse(savedPosition);
+      camera.position.set(position.x, position.y, position.z);
+    } else {
+      camera.position.y = 4;
+    }
+
+    if (savedTarget) {
+      const target = JSON.parse(savedTarget);
+      camera.lookAt(target.x, target.y, target.z);
+    }
+  }, [camera]);
+
+  // Save camera position to localStorage
+  useEffect(() => {
+    const saveCameraState = () => {
+      localStorage.setItem(
+        "cameraPosition",
+        JSON.stringify({
+          x: camera.position.x,
+          y: camera.position.y,
+          z: camera.position.z,
+        })
+      );
+
+      const target = new THREE.Vector3();
+      camera.getWorldDirection(target);
+      target.multiplyScalar(10).add(camera.position);
+
+      localStorage.setItem(
+        "cameraTarget",
+        JSON.stringify({
+          x: target.x,
+          y: target.y,
+          z: target.z,
+        })
+      );
+    };
+
+    const interval = setInterval(saveCameraState, 1000); // Save every second
+
+    return () => clearInterval(interval);
+  }, [camera]);
 
   let localColor;
   if (localStorage.getItem("bgColor")) {
@@ -42,6 +89,15 @@ function Three() {
     localAxes = true;
   }
   const axes = useControls({ axesHelper: localAxes });
+
+  useControls({
+    resetCamera: button(() => {
+      camera.position.set(0, 4, 10);
+      camera.lookAt(0, 0, 0);
+      localStorage.removeItem("cameraPosition");
+      localStorage.removeItem("cameraTarget");
+    }),
+  });
 
   const bg = useControls({
     bg: {
