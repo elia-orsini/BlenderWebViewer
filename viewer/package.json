@@ -3,20 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@react-three/drei": "^8.12.0",
-    "@react-three/fiber": "^7.0.26",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.1.3",
+    "@react-three/drei": "^9.88.13",
+    "@react-three/fiber": "^8.15.12",
     "@babel/plugin-syntax-flow": "^7.14.9",
     "@babel/core": "^7.0.0",
     "@babel/plugin-transform-react-jsx": "^7.14.9",
     "typescript": "4.9.1-beta",
-    "leva": "^0.9.23",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "three": "^0.138.3",
-    "web-vitals": "^2.1.4"
+    "leva": "^0.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "three": "^0.162.0",
+    "web-vitals": "^3.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
